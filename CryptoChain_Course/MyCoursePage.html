@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Us</title>
+		<link rel="stylesheet" type="text/css" href="HomePage.css">
+		<link rel="stylesheet" type="text/css" href="MyCoursePage.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	</head>
+	<body>		
+		<div class="nav-bar">
+			
+				<!-- <img src="../Image/logoo.png" /> -->
+				<h1 style="font-family: 'Arial Black', sans-serif; color: #ff9900; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); text-align: left;; font-size: 48px; line-height: 1.2; letter-spacing: 2px;">
+                    Crypto<span style="color: #33cc33;">C</span>hain<br><br>
+                </h1>
+		
+			<ul style="margin-top: 3%;">					
+				<li><a href="HomePage.html">Home</a></li>
+				<li>
+					<a href="MyCoursePage.html">My Course</a>
+				</li>
+				<li><a href="AccountPage.html">Account</a></li>
+				<li><a href="AboutUsPage.html">About Us</a></li>
+				<li><a href="">|</a></li>
+				<li><a href="LoginPage.html" class="login">Log In</a></li>
+				<li><a href="SignUpPage.html" class="signup">Sign Up</a></li>
+			</ul>			
+		</div>
+		
+		<div class="page-container">
+			
+			<br>
+			<br>
+			<div class="container">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="video-card">
+                                <h2 class="video-card-content">ch1: Introduction</h2>
+                                <video id="videoPlayer" width="700" controls>
+                                    <source src="../Image/introduction.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="list-card" style="overflow-y: auto;">
+                                <h2 style="text-align: center;width: 450px;">Course List</h2>
+                
+                                <button id="accordion" class="accordion">Introduction</button>
+                                <div class="panel">
+                
+                                    <a href="#" onclick="changeVideo('Cryptocurrency In 5 Minutes _ Cryptocurrency Explained _ What Is Cryptocurrency_ _ Simplilearn.mp4')">What is Cryptocurrency</a>
+									<a href="#" onclick="changeVideo('Blockchain In 7 Minutes _ What Is Blockchain _ Blockchain Explained_How Blockchain Works_Simplilearn.mp4')">Blockchain</a>
+                                    <a href="#" onclick="changeVideo('Bitcoin explained_ How do cryptocurrencies work_ - BBC News.mp4')">How do cryptocurrencies work</a>
+									<a href="#" onclick="changeVideo('What is Bitcoin_ Explained in 3 Minutes - Tuttle Twins.mp4')">What is Bitcoin</a>
+                                    <!-- Add more video links here for other chapters -->
+                                    <a href="#" onclick="changeVideo('../Image/quiz.mp4')">Quiz</a>
+                                </div>
+                
+                                <!-- Repeat the same structure for other courses -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <script>
+                    function changeVideo(videoSrc) {
+                        var videoPlayer = document.getElementById('videoPlayer');
+                        videoPlayer.src = videoSrc;
+                        videoPlayer.play(); // Autoplay the video
+                    }
+                </script>
+                                
+				
+			</div>
+			<br>
+			<br>
+			<br>
+		</div>
+		
+		<div class="footer">
+			<div class="footer-col1">
+				<h3>Support:</h3>
+				<a href="#phone"><i class="fa fa-phone"></i>&nbsp;&nbsp;+1-647 609 2674</a>
+				<a href="#email"><i class="fa fa-envelope"></i>&nbsp;&nbsp;elearning@domain.com</a>				
+			</div>				
+			<div class="footer-col2">
+				<h3>Useful Links:</h3>
+				<a href="HomePage.html">Home</a>
+				<a href="MyCoursePage.html">My Course</a>
+				<a href="AccountPage.html">Account</a>
+				<a href="AboutUsPage.html">About us</a>
+			</div>				
+			<div class="footer-col3">
+				<h3>Follow us:</h3>
+				<a href="https://www.facebook.com/"><i class="fa fa-facebook-f" style="color: rgb(0,135,201);"></i>&nbsp;&nbsp;Facebook</a>
+				<a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" style="color: rgb(0,135,201);"></i>&nbsp;Twitter</a>
+			</div>				
+		</div>
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+			for (i = 0; i < acc.length; i++) {			
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");	
+					var panel = this.nextElementSibling;
+					if (panel.style.display === "block") {
+						panel.style.display = "none";
+					} else {
+						panel.style.display = "block";
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
